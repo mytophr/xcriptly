@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pricing • Xcriptly</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#5C33F6',
+            lightgray: '#F4F4F6'
+          },
+          fontFamily: {
+            sans: ['Inter','ui-sans-serif'],
+            display: ['Poppins','ui-sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white text-gray-900">
+<header class="border-b border-lightgray p-4 flex justify-between">
+  <a href="/index.html" class="font-display font-bold text-xl">Xcriptly</a>
+  <nav class="flex gap-4">
+    <a href="/pricing.html">Pricing</a>
+    <a href="/case-studies.html">Case Studies</a>
+    <a href="/about.html">About</a>
+    <a href="/contact.html">Contact</a>
+  </nav>
+</header>
+
+<main class="max-w-5xl mx-auto p-8">
+  <h1 class="font-display text-4xl font-bold text-center">Simple, Transparent Pricing</h1>
+  <p class="text-center mt-2">Choose the plan that fits your webinar program.</p>
+  <div class="grid md:grid-cols-3 gap-6 mt-8">
+    <div class="border rounded p-6">
+      <h2 class="font-display text-2xl">Essentials</h2>
+      <p>$1,000/webinar or $2,500/mo</p>
+      <ul class="list-disc ml-5"><li>3–4 shorts</li><li>1 blog draft</li></ul>
+    </div>
+    <div class="border-2 border-primary rounded p-6">
+      <h2 class="font-display text-2xl">Growth</h2>
+      <p>$3,500/mo (3 webinars)</p>
+      <ul class="list-disc ml-5"><li>5–6 shorts</li><li>2 blogs</li></ul>
+    </div>
+    <div class="border rounded p-6">
+      <h2 class="font-display text-2xl">Premium</h2>
+      <p>$7,500+/mo (6 webinars)</p>
+      <ul class="list-disc ml-5"><li>8–10 shorts</li><li>3 blogs</li></ul>
+    </div>
+  </div>
+</main>
+
+<footer class="border-t border-lightgray p-6 text-center text-sm text-gray-600">
+  © <script>document.write(new Date().getFullYear())</script> Xcriptly • Beyond the Webinar
+</footer>
+</body>
+</html>
