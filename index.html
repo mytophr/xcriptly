@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home • Xcriptly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#5C33F6',
+            teal: '#12D6C4',
+            charcoal: '#15121B',
+            paper: '#0E0B14',
+            mist: '#F3F5FB',
+            coral: '#FF5C70'
+          },
+          fontFamily: {
+            sans: ['Inter','ui-sans-serif','system-ui'],
+            display: ['Poppins','Inter','ui-sans-serif','system-ui']
+          },
+          boxShadow: { soft: '0 8px 30px rgba(0,0,0,0.10)' },
+          keyframes: {
+            fadeUp: { '0%': {opacity:0, transform:'translateY(12px)'}, '100%': {opacity:1, transform:'translateY(0)'} },
+            float: { '0%,100%': { transform: 'translateY(0)'}, '50%': { transform: 'translateY(-8px)'} }
+          },
+          animation: { fadeUp: 'fadeUp .7s ease-out both', float: 'float 6s ease-in-out infinite' }
+        }
+      }
+    }
+  </script>
+  <style>
+    .container{max-width:1200px}
+    .glass{background:rgba(255,255,255,.06); backdrop-filter:saturate(180%) blur(16px);}
+    .gradient-bg{background:radial-gradient(1200px 600px at 10% -10%, rgba(92,51,246,.25), transparent 60%), 
+                             radial-gradient(1000px 600px at 110% 10%, rgba(18,214,196,.18), transparent 60%),
+                             linear-gradient(180deg, #0E0B14 0%, #111323 60%, #0E0B14 100%);}
+  </style>
+</head>
+
+<body class="bg-paper text-white">
+<header class="sticky top-0 z-40 bg-paper/80 backdrop-blur border-b border-white/5">
+  <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="/index.html" class="flex items-center gap-3">
+      <img src="/assets/logo-dark.png" alt="Xcriptly" class="h-8 w-auto">
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-sm">
+      <a class="hover:text-teal transition" href="/pricing.html">Pricing</a>
+      <a class="hover:text-teal transition" href="/case-studies.html">Case Studies</a>
+      <a class="hover:text-teal transition" href="/about.html">About</a>
+      <a class="hover:text-teal transition" href="/contact.html">Contact</a>
+      <a href="/contact.html" class="inline-flex items-center px-4 py-2 rounded-xl bg-primary text-white font-semibold shadow-soft hover:opacity-90 transition">Book a Strategy Call</a>
+    </nav>
+    <button id="menu" class="md:hidden p-2 rounded-lg border border-white/10">Menu</button>
+  </div>
+  <nav id="mobile" class="hidden md:hidden px-6 pb-4">
+    <div class="flex flex-col gap-3 text-sm">
+      <a href="/pricing.html">Pricing</a>
+      <a href="/case-studies.html">Case Studies</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+<script>
+  const m=document.getElementById('menu'); const mob=document.getElementById('mobile');
+  if(m&&mob){ m.onclick=()=>mob.classList.toggle('hidden'); }
+</script>
+
+<main>
+  <section class="relative gradient-bg">
+    <img src="/assets/feather-mark.png" alt="" class="hidden md:block pointer-events-none select-none absolute -left-8 bottom-0 w-56 opacity-30 animate-float">
+    <div class="container mx-auto px-6 py-28 md:py-36 grid lg:grid-cols-2 gap-12 items-center">
+      <div class="animate-fadeUp">
+        <span class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-teal/80 bg-white/5 border border-white/10 px-3 py-1 rounded-full">Content as a Service</span>
+        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mt-4">Your Webinar Deserves a <span class="text-teal">Second Life</span></h1>
+        <p class="mt-5 text-lg text-white/80">We transform your webinars into short clips, blogs, one‑pagers, and infographics — then deliver ROI insights that prove what resonated.</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="/contact.html" class="inline-flex items-center px-5 py-3 rounded-xl bg-primary text-white font-semibold shadow-soft hover:opacity-90 transition">Get Early Access</a>
+          <a href="/pricing.html" class="inline-flex items-center px-5 py-3 rounded-xl border border-white/10 hover:border-teal hover:text-teal transition">See Pricing</a>
+        </div>
+        <p class="mt-4 text-sm text-white/60">“Replay links rarely get watched. Give your content a second life where your audience actually lives.”</p>
+      </div>
+      <div class="relative">
+        <div class="glass rounded-3xl p-6 md:p-8 border border-white/10 shadow-soft animate-fadeUp">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="h-28 bg-white/5 rounded-2xl border border-white/10 flex items-center justify-center">Clip 01</div>
+            <div class="h-28 bg-white/5 rounded-2xl border border-white/10 flex items-center justify-center">Clip 02</div>
+            <div class="h-28 bg-white/5 rounded-2xl border border-white/10 flex items-center justify-center">Blog Draft</div>
+            <div class="h-28 bg-white/5 rounded-2xl border border-white/10 flex items-center justify-center">One‑Pager</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-paper">
+    <div class="container mx-auto px-6 py-20 grid lg:grid-cols-2 gap-10">
+      <div>
+        <h2 class="font-display text-3xl md:text-4xl font-bold">Most webinars die after the live event.</h2>
+      </div>
+      <div class="text-white/80">
+        <p>You spend weeks planning, thousands promoting, and hours delivering. Then what? A replay link almost no one clicks. Webinars fade into obscurity, leaving content potential untapped.</p>
+        <p class="mt-4">Xcriptly turns that single event into a library of assets your audience will actually use — and shows you what topics landed so you can plan the next one smarter.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-[#0F1222]">
+    <div class="container mx-auto px-6 py-20">
+      <h3 class="font-display text-2xl md:text-3xl font-semibold">One Webinar → Endless Content</h3>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+        <div class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-teal transition"><h4 class="font-semibold">Short-form video clips</h4><p class="text-white/70 mt-1">Optimized for LinkedIn, TikTok, Shorts.</p></div>
+        <div class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-teal transition"><h4 class="font-semibold">Blog drafts</h4><p class="text-white/70 mt-1">SEO + thought leadership.</p></div>
+        <div class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-teal transition"><h4 class="font-semibold">One‑pagers</h4><p class="text-white/70 mt-1">Executive summaries for sales.</p></div>
+        <div class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-teal transition"><h4 class="font-semibold">Infographics & carousels</h4><p class="text-white/70 mt-1">Designed for distribution.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-paper">
+    <div class="container mx-auto px-6 py-20">
+      <div class="flex items-end justify-between">
+        <h3 class="font-display text-2xl md:text-3xl font-semibold">Pilot Webinars</h3>
+        <a href="/case-studies.html" class="text-teal hover:underline">See all</a>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6 mt-8">
+        <article class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-teal transition"><h4 class="font-semibold">Webinar A → 12 Assets</h4><p class="text-white/70 mt-1">6 clips, 2 blogs, 2 one‑pagers, 1 carousel.</p><div class="mt-3 text-sm text-white/50">ROI Snapshot: sample outputs.</div></article>
+        <article class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-teal transition"><h4 class="font-semibold">Webinar B → 13 Assets</h4><p class="text-white/70 mt-1">8 clips, 2 blogs, 2 one‑pagers, 1 carousel.</p><div class="mt-3 text-sm text-white/50">Engagement: placeholders.</div></article>
+        <article class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-teal transition"><h4 class="font-semibold">Webinar C → 8 Assets</h4><p class="text-white/70 mt-1">5 clips, 1 blog, 1 one‑pager, 1 carousel.</p><div class="mt-3 text-sm text-white/50">Performance: update post‑launch.</div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="gradient-bg">
+    <div class="container mx-auto px-6 py-20 text-center">
+      <h3 class="font-display text-3xl md:text-4xl font-semibold">Ready to unlock more ROI from your webinars?</h3>
+      <p class="text-white/80 mt-2">Turn your next webinar into 10+ assets your audience will actually use.</p>
+      <a href="/contact.html" class="inline-flex mt-6 items-center px-6 py-3 rounded-xl bg-primary text-white font-semibold shadow-soft hover:opacity-90 transition">Get Early Access</a>
+    </div>
+  </section>
+</main>
+
+<footer class="border-t border-white/5">
+  <div class="container mx-auto px-6 py-14 grid md:grid-cols-2 items-center gap-6">
+    <div>
+      <h3 class="font-display text-2xl font-semibold">Beyond the Webinar</h3>
+      <p class="text-white/70 mt-1">Turn every event into a library of marketing assets with measurable ROI.</p>
+    </div>
+    <div class="text-right">
+      <a href="/contact.html" class="inline-flex items-center px-5 py-3 rounded-xl bg-primary text-white font-semibold shadow-soft hover:opacity-90 transition">Get Early Access</a>
+    </div>
+  </div>
+  <div class="container mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between text-sm text-white/60">
+    <p>© <span id="year"></span> Xcriptly. All rights reserved.</p>
+    <nav class="flex gap-6 mt-4 md:mt-0">
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+    </nav>
+  </div>
+  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</footer>
+</body>
+</html>

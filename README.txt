@@ -1,0 +1,1 @@
+Upload to GitHub, connect to Netlify. Assets in /assets.
