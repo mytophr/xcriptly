@@ -1,1 +1,1 @@
-Upload to GitHub, connect to Netlify. Assets in /assets.
+Upload to GitHub, connect to Netlify. Replace assets/logo.png with your real logo, and assets/infographic.jpg with high-res if desired.
