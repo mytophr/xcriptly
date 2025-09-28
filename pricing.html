@@ -4,9 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pricing • Xcriptly</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -14,127 +12,49 @@
         extend: {
           colors: {
             primary: '#5C33F6',
-            teal: '#12D6C4',
-            charcoal: '#15121B',
-            paper: '#0E0B14',
-            mist: '#F3F5FB',
-            coral: '#FF5C70'
+            teal: '#12D6C4'
           },
           fontFamily: {
             sans: ['Inter','ui-sans-serif','system-ui'],
             display: ['Poppins','Inter','ui-sans-serif','system-ui']
-          },
-          boxShadow: { soft: '0 8px 30px rgba(0,0,0,0.10)' },
-          keyframes: {
-            fadeUp: { '0%': {opacity:0, transform:'translateY(12px)'}, '100%': {opacity:1, transform:'translateY(0)'} },
-            float: { '0%,100%': { transform: 'translateY(0)'}, '50%': { transform: 'translateY(-8px)'} }
-          },
-          animation: { fadeUp: 'fadeUp .7s ease-out both', float: 'float 6s ease-in-out infinite' }
+          }
         }
       }
     }
   </script>
-  <style>
-    .container{max-width:1200px}
-    .glass{background:rgba(255,255,255,.06); backdrop-filter:saturate(180%) blur(16px);}
-    .gradient-bg{background:radial-gradient(1200px 600px at 10% -10%, rgba(92,51,246,.25), transparent 60%), 
-                             radial-gradient(1000px 600px at 110% 10%, rgba(18,214,196,.18), transparent 60%),
-                             linear-gradient(180deg, #0E0B14 0%, #111323 60%, #0E0B14 100%);}
-  </style>
 </head>
 
-<body class="bg-paper text-white">
-<header class="sticky top-0 z-40 bg-paper/80 backdrop-blur border-b border-white/5">
-  <div class="container mx-auto px-6 py-4 flex items-center justify-between">
-    <a href="/index.html" class="flex items-center gap-3">
-      <img src="/assets/logo-dark.png" alt="Xcriptly" class="h-8 w-auto">
+<body class="bg-white text-gray-800 font-sans">
+<header class="sticky top-0 bg-white shadow z-10">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="index.html" class="flex items-center">
+      <img src="assets/logo-dark.png" alt="Xcriptly Logo" class="h-8">
     </a>
-    <nav class="hidden md:flex items-center gap-8 text-sm">
-      <a class="hover:text-teal transition" href="/pricing.html">Pricing</a>
-      <a class="hover:text-teal transition" href="/case-studies.html">Case Studies</a>
-      <a class="hover:text-teal transition" href="/about.html">About</a>
-      <a class="hover:text-teal transition" href="/contact.html">Contact</a>
-      <a href="/contact.html" class="inline-flex items-center px-4 py-2 rounded-xl bg-primary text-white font-semibold shadow-soft hover:opacity-90 transition">Book a Strategy Call</a>
+    <nav class="hidden md:flex gap-6 font-medium text-sm">
+      <a href="solution.html">Solution</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="blog.html">Blog</a>
+      <a href="support.html">Support</a>
+      <a href="contact.html">Contact</a>
     </nav>
-    <button id="menu" class="md:hidden p-2 rounded-lg border border-white/10">Menu</button>
+    <a href="contact.html" class="hidden md:inline-block px-4 py-2 bg-gradient-to-r from-primary to-teal text-white rounded-lg font-semibold">Get Started</a>
   </div>
-  <nav id="mobile" class="hidden md:hidden px-6 pb-4">
-    <div class="flex flex-col gap-3 text-sm">
-      <a href="/pricing.html">Pricing</a>
-      <a href="/case-studies.html">Case Studies</a>
-      <a href="/about.html">About</a>
-      <a href="/contact.html">Contact</a>
-    </div>
-  </nav>
 </header>
-<script>
-  const m=document.getElementById('menu'); const mob=document.getElementById('mobile');
-  if(m&&mob){ m.onclick=()=>mob.classList.toggle('hidden'); }
-</script>
-
-<main class="bg-paper">
-  <section class="container mx-auto px-6 py-20">
-    <div class="text-center max-w-2xl mx-auto">
-      <h1 class="font-display text-4xl font-bold">Simple, Transparent Pricing</h1>
-      <p class="mt-3 text-white/80">Choose the plan that fits your webinar program. Each package includes AI-powered repurposing with human polish for agency-quality output.</p>
-    </div>
-    <div class="grid lg:grid-cols-3 gap-6 mt-12">
-      <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
-        <h2 class="font-display text-2xl font-semibold">Essentials</h2>
-        <p class="mt-2 text-white"><span class="text-2xl font-bold">$1,000</span> per webinar</p>
-        <p class="text-white/70">(Pay As You Go)</p>
-        <ul class="mt-6 space-y-2 text-white/80">
-          <li>3–4 video shorts</li><li>1 blog draft</li><li>1 one‑pager / executive summary</li><li>Standard templates</li><li>7–10 business day turnaround</li>
-        </ul>
-        <a href="/contact.html" class="mt-8 inline-flex w-full justify-center items-center px-5 py-3 rounded-xl bg-primary text-white font-semibold hover:opacity-90 transition">Get Started</a>
-      </div>
-      <div class="p-6 rounded-2xl bg-white/5 border-2 border-teal relative">
-        <div class="absolute -top-3 right-4 bg-teal text-paper text-xs font-semibold px-3 py-1 rounded-full">Most Popular</div>
-        <h2 class="font-display text-2xl font-semibold">Growth</h2>
-        <p class="mt-2 text-white"><span class="text-2xl font-bold">$3,500</span>/month <span class="text-white/70">(up to 3 webinars)</span></p>
-        <ul class="mt-6 space-y-2 text-white/80">
-          <li>5–6 video shorts per webinar</li><li>2 blog drafts</li><li>2 one‑pagers</li><li>1 infographic/carousel</li><li>Light branding customization (colors, logo)</li><li>5–7 business day turnaround</li><li>Slack/email support</li>
-        </ul>
-        <a href="/contact.html" class="mt-8 inline-flex w-full justify-center items-center px-5 py-3 rounded-xl bg-primary text-white font-semibold hover:opacity-90 transition">Choose Growth</a>
-      </div>
-      <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
-        <h2 class="font-display text-2xl font-semibold">Premium</h2>
-        <p class="mt-2 text-white"><span class="text-2xl font-bold">$7,500+</span>/month <span class="text-white/70">(custom scope, up to 6 webinars)</span></p>
-        <ul class="mt-6 space-y-2 text-white/80">
-          <li>8–10 video shorts per webinar</li><li>3 blog drafts</li><li>3 one‑pagers</li><li>2 infographics/carousels</li><li>Full brand customization</li><li>3–5 business day turnaround</li><li>Dedicated account manager</li><li>Monthly strategy call</li>
-        </ul>
-        <a href="/contact.html" class="mt-8 inline-flex w-full justify-center items-center px-5 py-3 rounded-xl bg-primary text-white font-semibold hover:opacity-90 transition">Talk to Sales</a>
-      </div>
-    </div>
-    <div class="mt-12 p-6 rounded-2xl bg-white/5 border border-white/10">
-      <h3 class="font-semibold text-lg">What’s included in every plan</h3>
-      <ul class="mt-3 grid md:grid-cols-3 gap-3 text-white/80">
-        <li>Full asset handoff</li><li>Usage rights for all deliverables</li><li>Editorial QA and human polish</li><li>ROI snapshot with engagement insights</li><li>Optional caption copy for social</li><li>Month‑to‑month flexibility</li>
-      </ul>
-    </div>
-  </section>
-</main>
-
-<footer class="border-t border-white/5">
-  <div class="container mx-auto px-6 py-14 grid md:grid-cols-2 items-center gap-6">
+<main class='max-w-6xl mx-auto px-6 py-20'><h1 class='font-display text-3xl font-bold text-center'>Simple, Transparent Pricing</h1></main>
+<footer class="bg-gray-50 border-t mt-20">
+  <div class="max-w-6xl mx-auto px-6 py-10 grid md:grid-cols-2 gap-6">
     <div>
-      <h3 class="font-display text-2xl font-semibold">Beyond the Webinar</h3>
-      <p class="text-white/70 mt-1">Turn every event into a library of marketing assets with measurable ROI.</p>
+      <img src="assets/logo-dark.png" class="h-6 mb-3" alt="Xcriptly">
+      <p class="text-sm text-gray-500">Beyond the Webinar • © 2025 Xcriptly</p>
     </div>
-    <div class="text-right">
-      <a href="/contact.html" class="inline-flex items-center px-5 py-3 rounded-xl bg-primary text-white font-semibold shadow-soft hover:opacity-90 transition">Get Early Access</a>
-    </div>
-  </div>
-  <div class="container mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between text-sm text-white/60">
-    <p>© <span id="year"></span> Xcriptly. All rights reserved.</p>
-    <nav class="flex gap-6 mt-4 md:mt-0">
-      <a href="/about.html">About</a>
-      <a href="/contact.html">Contact</a>
-      <a href="#">Privacy</a>
-      <a href="#">Terms</a>
+    <nav class="flex gap-4 text-sm text-gray-600 justify-end">
+      <a href="solution.html">Solution</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="blog.html">Blog</a>
+      <a href="support.html">Support</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </div>
-  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
 </footer>
 </body>
 </html>
